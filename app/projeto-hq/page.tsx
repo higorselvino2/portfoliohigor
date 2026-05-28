@@ -1,20 +1,9 @@
 'use client';
-import React, { useEffect, useState, useRef, forwardRef } from 'react';
+import React, { useState } from 'react';
 import ProjectLayout from '@/components/ProjectLayout';
 import { useLang } from '@/app/LangContext';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const HTMLFlipBook = dynamic(() => import('react-pageflip'), { ssr: false });
-
-const Page = forwardRef<HTMLDivElement, any>((props, ref) => {
-    return (
-        <div className="page-content" ref={ref} data-density={props.density || 'soft'}>
-            {props.children}
-        </div>
-    );
-});
-Page.displayName = 'Page';
+import Image from 'next/image';
 
 const translations: Record<string, Record<string, string>> = {
   pt: {
@@ -83,12 +72,15 @@ export default function ProjetoHQ() {
   const { lang } = useLang();
   const t = (key: string) => translations[lang][key] || key;
   const [viewMode, setViewMode] = useState<'book' | 'scroll'>('book');
-  const bookRef = useRef<any>(null);
-  const [pageInfo, setPageInfo] = useState('PÁG. 1 / 48');
-
-  const onPage = (e: any) => {
-      setPageInfo(`PÁG. ${e.data + 1} / 48`);
-  };
+  
+  const bookPages = [
+    "/images/Cover.webp",
+    ...Array.from({length:37}).map((_,i) => `/images/projects/projeto-hq/P${i+1}.webp`),
+    "/images/projects/projeto-hq/P38-39.webp",
+    ...Array.from({length:5}).map((_,i) => `/images/projects/projeto-hq/P${i+40}.webp`),
+    "/images/projects/projeto-hq/Back Cover.webp"
+  ];
+  const [currentPage, setCurrentPage] = useState(0);
 
   return (
     <ProjectLayout brandColor="#00FFA3" brandClass="text-[#00FFA3]" bgGlowClass="bg-[#00FFA3]/5" footerThemeClass="text-[#00FFA3]/5">
@@ -107,7 +99,7 @@ export default function ProjetoHQ() {
             </div>
             
             <div className="w-full aspect-[16/9] md:aspect-[21/9] lg:max-h-[65vh] xl:max-h-[75vh] rounded-[16px] sm:rounded-[24px] overflow-hidden relative cursor-view bg-brand-card border border-white/10 project-img-wrapper shadow-2xl">
-                <img src="/ultrawide imagem além do céu.jpg" alt="Capa Ultrawide Além do Céu" className="w-full h-full object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700 hover:scale-105" data-speed="0.05" />
+                <Image src="/images/projects/projeto-hq/ultrawide imagem além do céu.webp" alt="Capa Ultrawide Além do Céu" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700 hover:scale-105" data-speed="0.05" />
             </div>
         </header>
 
@@ -136,8 +128,8 @@ export default function ProjetoHQ() {
                 <p className="text-white/50 font-medium text-sm sm:text-base">{t('videoSubtitle')}</p>
             </div>
             <div className="w-full aspect-video rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card shadow-2xl border border-white/5 cursor-hover">
-                <video className="w-full h-full object-cover" controls playsInline poster="/Além do Céu imagem principal 1.jpg">
-                    <source src="/Final_video.mp4" type="video/mp4" />
+                <video className="w-full h-full object-cover" controls playsInline poster="/images/projects/projeto-hq/Além do Céu imagem principal 1.webp">
+                    <source src="/videos/Final_video.mp4" type="video/mp4" />
                 </video>
             </div>
         </section>
@@ -159,57 +151,24 @@ export default function ProjetoHQ() {
             
             {viewMode === 'book' && (
               <div className="relative w-full flex flex-col items-center py-6 sm:py-10">
-                  <HTMLFlipBook 
-                      width={600} 
-                      height={900} 
-                      size="stretch"
-                      minWidth={300}
-                      maxWidth={1000}
-                      minHeight={400}
-                      maxHeight={1400}
-                      maxShadowOpacity={0.6}
-                      showCover={true}
-                      mobileScrollSupport={false}
-                      onFlip={onPage}
-                      className="flip-book cursor-flip"
-                      ref={bookRef}
-                      style={{}}
-                      startPage={0}
-                      drawShadow={true}
-                      flippingTime={1000}
-                      usePortrait={true}
-                      startZIndex={0}
-                      autoSize={true}
-                      clickEventForward={true}
-                      useMouseEvents={true}
-                      swipeDistance={30}
-                      showPageCorners={true}
-                      disableFlipByClick={false}
-                  >
-                      <Page density="hard"><img src="/Cover.png" alt="Capa" className="w-full h-full object-contain bg-[#0a0a0a] p-1" /></Page>
-                      <Page><div className="w-full h-full bg-[#0a0a0a]"></div></Page>
-                      {Array.from({length:37}).map((_,i) => <Page key={i}><img src={`/P${i+1}.png`} className="w-full h-full object-contain bg-[#0a0a0a] p-1" /></Page>)}
-                      <Page><div className="w-full h-full bg-[#0a0a0a] p-1 pr-0"><img src="/P38-39.png" className="w-full h-full object-cover object-left" /></div></Page>
-                      <Page><div className="w-full h-full bg-[#0a0a0a] p-1 pl-0"><img src="/P38-39.png" className="w-full h-full object-cover object-right" /></div></Page>
-                      {Array.from({length:5}).map((_,i) => <Page key={i}><img src={`/P${i+40}.png`} className="w-full h-full object-contain bg-[#0a0a0a] p-1" /></Page>)}
-                      <Page><div className="w-full h-full bg-[#0a0a0a]"></div></Page>
-                      <Page density="hard"><img src="/Back Cover.png" alt="Contracapa" className="w-full h-full object-contain bg-[#0a0a0a] p-1" /></Page>
-                  </HTMLFlipBook>
+                  <div className="w-full max-w-5xl aspect-[3/4] sm:aspect-square md:aspect-[4/3] lg:aspect-[16/9] relative bg-[#0a0a0a] rounded-lg shadow-2xl flex items-center justify-center overflow-hidden border border-white/10">
+                      <Image src={bookPages[currentPage]} alt={`Página ${currentPage + 1}`} fill className="object-contain p-2" />
+                  </div>
                   <div className="flex items-center justify-center gap-6 mt-8 w-full max-w-md mx-auto bg-black/50 p-4 rounded-full border border-white/10 shadow-2xl relative z-10 backdrop-blur-sm">
-                      <button onClick={() => bookRef.current && bookRef.current.pageFlip().flipPrev()} className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#00FFA3] hover:text-black transition-colors text-white cursor-hover"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-                      <span className="text-[#00FFA3] font-bold tracking-widest text-sm font-display">{pageInfo}</span>
-                      <button onClick={() => bookRef.current && bookRef.current.pageFlip().flipNext()} className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#00FFA3] hover:text-black transition-colors text-white cursor-hover"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                      <button onClick={() => setCurrentPage(p => Math.max(0, p - 1))} className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#00FFA3] hover:text-black transition-colors text-white cursor-hover"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                      <span className="text-[#00FFA3] font-bold tracking-widest text-sm font-display">PÁG. {currentPage + 1} / {bookPages.length}</span>
+                      <button onClick={() => setCurrentPage(p => Math.min(bookPages.length - 1, p + 1))} className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#00FFA3] hover:text-black transition-colors text-white cursor-hover"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg></button>
                   </div>
               </div>
             )}
 
             {viewMode === 'scroll' && (
               <div className="w-full max-w-4xl mx-auto flex flex-col gap-4 py-6 bg-black border border-white/5 rounded-2xl shadow-2xl p-2 sm:p-6 md:p-10">
-                  <img src="/Cover.png" className="w-full h-auto object-contain shadow-lg" />
-                  {Array.from({length:37}).map((_,i) => <img key={i} src={`/P${i+1}.png`} className="w-full h-auto object-contain shadow-lg" />)}
-                  <img src="/P38-39.png" className="w-full h-auto object-contain shadow-2xl my-4 border border-[#00FFA3]/20 rounded-lg" />
-                  {Array.from({length:5}).map((_,i) => <img key={i} src={`/P${i+40}.png`} className="w-full h-auto object-contain shadow-lg" />)}
-                  <img src="/Back Cover.png" className="w-full h-auto object-contain shadow-lg" />
+                  <Image src="/images/Cover.webp" alt="Capa" width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />
+                  {Array.from({length:37}).map((_,i) => <Image key={i} src={`/images/projects/projeto-hq/P${i+1}.webp`} alt={`Página ${i+1}`} width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />)}
+                  <Image src="/images/projects/projeto-hq/P38-39.webp" alt="Páginas 38-39" width={2400} height={1800} className="w-full h-auto object-contain shadow-2xl my-4 border border-[#00FFA3]/20 rounded-lg" />
+                  {Array.from({length:5}).map((_,i) => <Image key={i} src={`/images/projects/projeto-hq/P${i+40}.webp`} alt={`Página ${i+40}`} width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />)}
+                  <Image src="/images/projects/projeto-hq/Back Cover.webp" alt="Contracapa" width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />
               </div>
             )}
 
@@ -221,9 +180,9 @@ export default function ProjetoHQ() {
                 <p className="text-white/70 font-medium text-sm sm:text-lg">{t('galleryDesc')}</p>
             </div>
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 sm:gap-8 space-y-6 sm:space-y-8">
-                {['/imagem HQ e Sketch.png', '/1768425642299.jpeg', '/1768425642365.jpeg', '/1768425645964.jpeg', '/cards.jpg', '/1768425644019.jpeg', '/1768425644264.jpeg', '/bottons.png'].map((src, i) => (
-                    <div key={i} className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view break-inside-avoid relative border border-white/5 bg-brand-card shadow-xl" data-aos="fade-up">
-                        <img src={src} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                {['/images/projects/projeto-hq/imagem HQ e Sketch.webp', '/images/projects/projeto-hq/1768425642299.webp', '/images/projects/projeto-hq/1768425642365.webp', '/images/projects/projeto-hq/1768425645964.webp', '/images/projects/projeto-hq/cards.webp', '/images/projects/projeto-hq/1768425644019.webp', '/images/projects/projeto-hq/1768425644264.webp', '/images/projects/projeto-hq/bottons.webp'].map((src, i) => (
+                    <div key={i} className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view break-inside-avoid relative border border-white/5 bg-brand-card shadow-xl group" data-aos="fade-up">
+                        <Image src={src} alt={`Galeria ${i+1}`} width={800} height={1200} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
                 ))}
             </div>
@@ -235,7 +194,7 @@ export default function ProjetoHQ() {
                 <p className="text-white/50 font-medium text-sm sm:text-lg">{t('assetsDesc')}</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-                <a href="/HQ diagramação - miolo ver.pdf" target="_blank" className="pdf-card bg-brand-card border border-white/10 rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center cursor-hover group shadow-xl hover:-translate-y-2 transition-transform">
+                <a href="/pdfs/HQ diagramação - miolo ver.pdf" target="_blank" className="pdf-card bg-brand-card border border-white/10 rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center cursor-hover group shadow-xl hover:-translate-y-2 transition-transform">
                     <h4 className="font-display font-bold text-xl sm:text-2xl uppercase text-white mb-2">{t('hqComplete')}</h4>
                     <p className="text-white/50 text-xs sm:text-sm mb-6 sm:mb-8">{t('hqDesc')}</p>
                     <span className="mt-auto px-4 sm:px-6 py-1.5 sm:py-2 border border-[#00FFA3] text-[#00FFA3] rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest">{t('btnView')}</span>

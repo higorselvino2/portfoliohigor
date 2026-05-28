@@ -2,6 +2,7 @@
 import ProjectLayout from '@/components/ProjectLayout';
 import { useLang } from '@/app/LangContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const translations: Record<string, Record<string, string>> = {
   pt: {
@@ -71,7 +72,7 @@ export default function TheFlorist() {
             </div>
             
             <div className="w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] lg:max-h-[65vh] xl:max-h-[75vh] rounded-[16px] sm:rounded-[24px] overflow-hidden relative cursor-view bg-brand-card border border-white/10 project-img-wrapper shadow-2xl">
-                <img src="/ultrawide imagem the florist.jpg" alt="The Florist Capa" className="w-full h-full object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700" data-speed="0.05" />
+                <Image src="/images/projects/the-florist/ultrawide imagem the florist.webp" alt="The Florist Capa" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700" data-speed="0.05" />
             </div>
         </header>
 
@@ -93,7 +94,7 @@ export default function TheFlorist() {
                 </div>
                 
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view bg-brand-card border border-white/5 shadow-xl mt-2" data-aos="fade-up">
-                    <img src="/The Florist - Pitch Deck 2 (2)_page-0004.jpg" alt="Página de História" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/the-florist/The Florist - Pitch Deck 2 (2)_page-0004.webp" alt="Página de História" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
         </section>
@@ -101,7 +102,7 @@ export default function TheFlorist() {
         <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 border-t border-white/5">
             <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
                 <div className="w-full md:w-1/2 lg:w-3/5 rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view border border-white/5 bg-brand-card shadow-xl" data-aos="fade-up">
-                    <img src="/The Florist - Pitch Deck 2 (2)_page-0007.jpg" alt="Cast e Equipe" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/the-florist/The Florist - Pitch Deck 2 (2)_page-0007.webp" alt="Cast e Equipe" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="w-full md:w-1/2 lg:w-2/5" data-aos="fade-up" data-aos-delay="100">
                     <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[56px] font-display font-black uppercase tracking-wider text-white mb-4 sm:mb-6">{t('castTitle')}</h3>
@@ -113,7 +114,7 @@ export default function TheFlorist() {
         <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16">
             <div className="flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 lg:gap-16">
                 <div className="w-full md:w-1/2 lg:w-3/5 rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view border border-white/5 bg-brand-card shadow-xl" data-aos="fade-up">
-                    <img src="/The Florist - Pitch Deck 2 (2)_page-0011.jpg" alt="Timeline e Cronograma" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/the-florist/The Florist - Pitch Deck 2 (2)_page-0011.webp" alt="Timeline e Cronograma" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="w-full md:w-1/2 lg:w-2/5 text-left md:text-right" data-aos="fade-up" data-aos-delay="100">
                     <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[56px] font-display font-black uppercase tracking-wider text-white mb-4 sm:mb-6">{t('roadmapTitle')}</h3>
@@ -129,10 +130,10 @@ export default function TheFlorist() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view border border-white/5 bg-brand-card shadow-xl" data-aos="fade-up">
-                    <img src="/The Florist - Pitch Deck 2 (2)_page-0008.jpg" alt="Orçamento" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/the-florist/The Florist - Pitch Deck 2 (2)_page-0008.webp" alt="Orçamento" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/5 bg-brand-card shadow-xl md:mt-12 lg:mt-20" data-aos="fade-up" data-aos-delay="100">
-                    <img src="/The Florist - Pitch Deck 2 (2)_page-0013.jpg" alt="Porque Investir" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/the-florist/The Florist - Pitch Deck 2 (2)_page-0013.webp" alt="Porque Investir" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
 
@@ -143,7 +144,7 @@ export default function TheFlorist() {
 
         <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 flex justify-center">
             <div className="w-full max-w-4xl rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view border border-white/5 bg-brand-card shadow-2xl" data-aos="zoom-in">
-                <img src="/The Florist - Pitch Deck 2 (2)_page-0015.jpg" alt="Capa Traseira" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/projects/the-florist/The Florist - Pitch Deck 2 (2)_page-0015.webp" alt="Capa Traseira" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
             </div>
         </section>
 

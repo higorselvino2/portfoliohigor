@@ -2,6 +2,7 @@
 import ProjectLayout from '@/components/ProjectLayout';
 import { useLang } from '@/app/LangContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const translations: Record<string, Record<string, string>> = {
   pt: {
@@ -71,7 +72,7 @@ export default function Doaleite() {
                 </h1>
             </div>
             <div className="w-full aspect-[16/9] md:aspect-[21/9] lg:max-h-[65vh] xl:max-h-[75vh] rounded-[16px] sm:rounded-[24px] overflow-hidden relative cursor-view bg-brand-card border border-white/10 project-img-wrapper shadow-2xl">
-                <img src="/ultrawide imagem doaleite.jpg" alt="Doaleite" className="w-full h-full object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700" data-speed="0.05" />
+                <Image src="/images/projects/doaleite/ultrawide imagem doaleite.webp" alt="Doaleite" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700" data-speed="0.05" />
             </div>
         </header>
 
@@ -91,7 +92,7 @@ export default function Doaleite() {
                     <p>{t('p2')}</p>
                 </div>
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view bg-brand-card border border-white/5 shadow-xl mt-2 sm:mt-4" data-aos="fade-up">
-                    <img src="/sobre o projeto.png" alt="Sobre o Projeto" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/doaleite/sobre o projeto.webp" alt="Sobre o Projeto" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
         </section>
@@ -103,10 +104,10 @@ export default function Doaleite() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-8">
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-white flex justify-center items-center border border-white/5 cursor-view shadow-xl" data-aos="fade-right">
-                    <img src="/gif logo doaleite.gif" alt="Logo Animado Doaleite" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/doaleite/gif logo doaleite.gif" alt="Logo Animado Doaleite" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-xl" data-aos="fade-left">
-                    <img src="/paleta de cores d.jpg" alt="Paleta de Cores" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/doaleite/paleta de cores d.webp" alt="Paleta de Cores" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
         </section>
@@ -118,10 +119,10 @@ export default function Doaleite() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-xl" data-aos="fade-up">
-                    <img src="/tipografia.png" alt="Tipografia" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/doaleite/tipografia.webp" alt="Tipografia" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-xl" data-aos="fade-up" data-aos-delay="100">
-                    <img src="/Ilustrações.png" alt="Ilustrações" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/doaleite/Ilustrações.webp" alt="Ilustrações" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
         </section>
@@ -132,7 +133,7 @@ export default function Doaleite() {
                 <p className="text-white/50 font-medium text-sm sm:text-lg">{t('motionSubtitle')}</p>
             </div>
             <div className="w-full bg-brand-card rounded-[16px] sm:rounded-[24px] border border-white/5 flex justify-center items-center overflow-hidden cursor-view shadow-xl">
-                <img src="/53a997149768183.62ed293c64dbe.gif" alt="Doaleite Motion" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/projects/doaleite/53a997149768183.62ed293c64dbe.gif" alt="Doaleite Motion" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
             </div>
         </section>
 
@@ -143,10 +144,10 @@ export default function Doaleite() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-xl" data-aos="fade-up">
-                    <img src="/aplicação na rede social.png" alt="Aplicação Rede Social 1" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/doaleite/aplicação na rede social.webp" alt="Aplicação Rede Social 1" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-xl" data-aos="fade-up" data-aos-delay="100">
-                    <img src="/aplicação na rede social 2.png" alt="Aplicação Rede Social 2" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/projects/doaleite/aplicação na rede social 2.webp" alt="Aplicação Rede Social 2" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
         </section>
