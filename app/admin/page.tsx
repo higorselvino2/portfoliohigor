@@ -36,8 +36,12 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      fetchProjects();
-      fetchContacts();
+      supabase.from('projects').select('*').order('created_at', { ascending: false }).then(({ data }) => {
+        if (data) setProjects(data);
+      });
+      supabase.from('contacts').select('*').order('created_at', { ascending: false }).then(({ data }) => {
+        if (data) setContacts(data);
+      });
     }
   }, [isAuthenticated]);
 

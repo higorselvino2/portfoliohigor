@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import { Titillium_Web } from 'next/font/google';
 import 'aos/dist/aos.css';
 import './globals.css';
+import { LangProvider } from './LangContext';
 
 const titillium = Titillium_Web({
   subsets: ['latin'],
@@ -21,7 +22,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="pt-PT" className={`scroll-smooth ${titillium.className}`}>
       <body suppressHydrationWarning className="antialiased selection:bg-brand-yellow selection:text-black tracking-wide">
-        {children}
+        <LangProvider>
+          {children}
+        </LangProvider>
       </body>
     </html>
   );

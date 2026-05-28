@@ -13,10 +13,14 @@
 
 :root {
   --brand-accent: #FFD500;
+  --brand-accent-glow: rgba(255, 213, 0, 0.4);
+  --brand-accent-glow-strong: rgba(255, 213, 0, 0.6);
 }
 
 .shrek-mode {
   --brand-accent: #7fb03e;
+  --brand-accent-glow: rgba(127, 176, 62, 0.4);
+  --brand-accent-glow-strong: rgba(127, 176, 62, 0.6);
 }
 
 body {

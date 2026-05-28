@@ -66,7 +66,7 @@ export default function Home() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  const projects = [
+  const baseProjects = [
     { title: 'Além do Céu', desc: 'Livro & HQ', link: '/projeto-hq', img: '/Além do Céu imagem principal 1.jpg', badge: '🏆 Vencedor Expocom Sudeste' },
     { title: 'Cacau Parque', desc: 'Embalagem & Identidade Visual', link: '/projeto-cacau', img: '/Cacau Parque imagem principal 1.jpg', badge: '🏆 Vencedor do Anhembi Awards' },
     { title: 'Song Bird', desc: 'Música & Estúdio', link: '/songbird', img: '/song bird imagem principal 1.jpg' },
@@ -77,13 +77,26 @@ export default function Home() {
     { title: 'Ilustrações', desc: 'Arte Digital', link: 'https://instagram.com/higor.selvino', img: '/Ilustrações imagem principal 1.jpg', blank: true },
   ];
 
+  const shrekProjects = [
+    { title: 'Além do Pântano', desc: 'Ogro & Aventura', link: '/projeto-hq', img: '/1211043-shrek-arrive-sur-netflix-le-1er-novembre-2025.jpg', badge: '🏆 Vencedor do Pântano' },
+    { title: 'Cacau do Ogro', desc: 'Sabor de Lama', link: '/projeto-cacau', img: '/shrek-passeios-kids.jpg', badge: '🏆 Cebola de Ouro' },
+    { title: 'Voz da Fiona', desc: 'Canto da Fiona', link: '/songbird', img: '/images (1).jpeg' },
+    { title: 'Matcha do Burro', desc: 'Sabor de Lama', link: '/matcha-mojo', img: '/5d43f01-shrek-1024x576.avif' },
+    { title: 'Baly Ogro', desc: 'Baly de Ogro', link: '/projeto-baly', img: '/maxresdefault.jpg' },
+    { title: 'Doaleite Ogrístico', desc: 'Amigos da Fiona', link: '/doaleite', img: '/blob_reva.jpg' },
+    { title: 'O Florista Ogro', desc: 'O Florista Ogro', link: '/the-florist', img: '/burro-do-shrek_2025-07-30_14-47-35.webp' },
+    { title: 'Rabiscos do Shrek', desc: 'Rabiscos na Lama', link: 'https://instagram.com/higor.selvino', img: '/Shrek_Shrek_FE-TUBBZ_PL_1.jpg', blank: true },
+  ];
+
+  const projects = isShrekMode ? shrekProjects : baseProjects;
+
   return (
     <>
       <div className="noise-bg"></div>
-      <div className="fixed top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-brand-yellow/5 rounded-full blur-[150px] pointer-events-none z-[-1]"></div>
-      <div className="fixed bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-brand-yellow/5 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+      <div className="fixed top-[-20%] left-[-10%] w-[50vw] h-[50vw] rounded-full blur-[150px] pointer-events-none z-[-1] bg-brand-yellow/5"></div>
+      <div className="fixed bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] rounded-full blur-[120px] pointer-events-none z-[-1] bg-brand-yellow/5"></div>
 
-      <button onClick={scrollToTop} className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-brand-yellow text-brand-dark p-3 md:p-4 rounded-full shadow-[0_0_20px_rgba(255,213,0,0.4)] transition-all duration-300 hover:scale-110 hover:bg-white ${showScroll ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none translate-y-4'}`}>
+      <button onClick={scrollToTop} className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-brand-yellow text-brand-dark p-3 md:p-4 rounded-full transition-all duration-300 hover:scale-110 hover:bg-white ${showScroll ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none translate-y-4'}`} style={{ boxShadow: '0 0 20px var(--brand-accent-glow)' }}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 md:w-6 md:h-6"><path d="M18 15l-6-6-6 6"/></svg>
       </button>
 
@@ -158,7 +171,7 @@ export default function Home() {
                             <img src={p.img} alt={p.title} className="w-full h-full object-cover project-img-parallax opacity-90 group-hover:opacity-100 transition-opacity" />
                             {p.badge && (
                                 <div className="absolute bottom-6 left-6 z-20 pointer-events-none transition-transform duration-300 group-hover:-translate-y-2">
-                                    <span className="bg-brand-yellow text-brand-dark px-4 py-2.5 md:px-5 md:py-3 rounded-full text-xs md:text-sm font-black uppercase tracking-widest flex items-center gap-2.5 border-2 border-white/20 shadow-[0_0_20px_rgba(255,213,0,0.6)] animate-pulse">
+                                    <span className="bg-brand-yellow text-brand-dark px-4 py-2.5 md:px-5 md:py-3 rounded-full text-xs md:text-sm font-black uppercase tracking-widest flex items-center gap-2.5 border-2 border-white/20 animate-pulse" style={{ boxShadow: '0 0 20px var(--brand-accent-glow-strong)' }}>
                                         {p.badge}
                                     </span>
                                 </div>
@@ -228,7 +241,7 @@ export default function Home() {
                     </form>
                     
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-4 w-full sm:w-auto justify-center">
-                        <a href="mailto:hh.selvino@gmail.com" className="px-6 py-3 md:px-8 md:py-4 bg-brand-yellow text-brand-dark rounded-full font-bold uppercase tracking-widest text-[10px] md:text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 md:gap-3 shadow-[0_0_30px_rgba(255,213,0,0.3)]">
+                        <a href="mailto:hh.selvino@gmail.com" className="px-6 py-3 md:px-8 md:py-4 bg-brand-yellow text-brand-dark rounded-full font-bold uppercase tracking-widest text-[10px] md:text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 md:gap-3" style={{ boxShadow: '0 0 30px var(--brand-accent-glow)' }}>
                             hh.selvino@gmail.com
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>

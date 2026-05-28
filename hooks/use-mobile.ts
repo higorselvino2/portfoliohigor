@@ -8,17 +8,18 @@ export function useIsMobile() {
   React.useEffect(() => {
     const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
     
-    // Set initial state without triggering warning by avoiding direct sync set if possible, 
-    // but here we just need to set the value once. Next.js hook rules prefer not to do it synchronously if it causes issues.
-    // Instead we can initialize the state conditionally if window is defined.
-    setIsMobile(mql.matches);
+    // Instead of synchronous setState, we can use a tiny timeout
+    const timer = setTimeout(() => setIsMobile(mql.matches), 0)
 
     const onChange = (e: MediaQueryListEvent) => {
       setIsMobile(e.matches)
     }
     mql.addEventListener("change", onChange)
     
-    return () => mql.removeEventListener("change", onChange)
+    return () => {
+      clearTimeout(timer)
+      mql.removeEventListener("change", onChange)
+    }
   }, [])
 
   return !!isMobile
