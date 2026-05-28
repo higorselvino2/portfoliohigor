@@ -65,7 +65,7 @@ export default function Songbird() {
             </div>
             
             <div className="w-full aspect-[16/9] md:aspect-[21/9] lg:max-h-[65vh] xl:max-h-[75vh] rounded-[16px] sm:rounded-[24px] overflow-hidden relative cursor-view bg-brand-card border border-white/10 project-img-wrapper shadow-2xl">
-                <Image src="/images/projects/songbird/ultrawide imagem songbird.webp" alt="Songbird Capa" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700" data-speed="0.05" />
+                <Image src="/images/ultrawide imagem songbird.jpg" alt="Songbird Capa" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700" data-speed="0.05" />
             </div>
         </header>
 
@@ -88,7 +88,7 @@ export default function Songbird() {
                 </div>
                 
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view bg-brand-card border border-white/5 shadow-xl mt-2 sm:mt-4" data-aos="fade-up">
-                    <Image src="/images/projects/songbird/identidade criada.webp" alt="Conceito Songbird" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/identidade criada e baseada na maneira que pássaros cantaam e mostram sua beleza que em conjunto com a múscia se complementam como um pássaro e sua voz..jpg" alt="Conceito Songbird" width={1600} height={900} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
         </section>
@@ -101,10 +101,10 @@ export default function Songbird() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-8">
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card flex justify-center items-center border border-white/5 cursor-view shadow-xl" data-aos="fade-right">
-                    <Image src="/images/projects/songbird/gif do projeto.gif" alt="Logo Animado Songbird" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/gif do projeto.gif" alt="Logo Animado Songbird" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-xl" data-aos="fade-left">
-                    <Image src="/images/projects/songbird/paleta de cores s.webp" alt="Paleta de Cores" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                    <Image src="/images/paleta de cores s.jpg" alt="Paleta de Cores" width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>
         </section>
@@ -117,10 +117,10 @@ export default function Songbird() {
 
             <div className="columns-1 sm:columns-2 gap-6 sm:gap-8 space-y-6 sm:space-y-8">
                 {[
-                  '/images/projects/songbird/aplicação do design no disco.webp', 
-                  '/images/projects/songbird/aplicação do design.webp', 
-                  '/images/projects/songbird/44-songbird-design-studio-6000.webp', 
-                  '/images/projects/songbird/60-songbird-design-studio-11-1.webp'
+                  '/images/aplicação do design no disco.jpg', 
+                  '/images/aplicação do design.jpg', 
+                  '/images/44-songbird-design-studio-6000.jpg', 
+                  '/images/60-songbird-design-studio-11-1.jpg'
                 ].map((src, i) => (
                     <div key={i} className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view break-inside-avoid relative group border border-white/5 bg-brand-card shadow-xl" data-aos="fade-up" data-aos-delay={(i % 2) * 100}>
                         <Image src={src} alt="Design Applications" width={800} height={1200} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />

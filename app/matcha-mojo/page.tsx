@@ -57,7 +57,7 @@ export default function MatchaMojo() {
         
         <header className="relative w-full min-h-[85vh] lg:max-h-[90vh] flex flex-col justify-end pt-32 pb-12 sm:pb-16 px-4 sm:px-8 md:px-12 bg-black overflow-hidden mt-[-100px]">
             <div className="absolute inset-0 z-0">
-                <Image src="/images/projects/matcha-mojo/matcha mojo imagem principal 1.webp" alt="Matcha Mojo Texture" fill className="object-cover opacity-60 scale-105 animate-[pulse_10s_ease-in-out_infinite]" />
+                <Image src="/images/matcha mojo imagem principal 1.jpg" alt="Matcha Mojo Texture" fill className="object-cover opacity-60 scale-105 animate-[pulse_10s_ease-in-out_infinite]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent"></div>
             </div>
 
@@ -101,22 +101,22 @@ export default function MatchaMojo() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 auto-rows-[160px] sm:auto-rows-[250px] md:auto-rows-[300px]">
                 <div className="col-span-2 row-span-2 bg-brand-card border border-white/5 rounded-[24px] sm:rounded-[32px] overflow-hidden flex items-center justify-center group cursor-view relative" data-aos="zoom-in">
-                    <Image src="/images/projects/matcha-mojo/matchoAtivo 1.webp" alt="Ecosystem 1" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <Image src="/images/matchoAtivo 1.png" alt="Ecosystem 1" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="col-span-1 row-span-1 bg-[#B4E82E] rounded-[24px] sm:rounded-[32px] p-4 sm:p-8 flex items-center justify-center group cursor-view relative" data-aos="zoom-in" data-aos-delay="100">
-                    <Image src="/images/projects/matcha-mojo/matchoAtivo 3.webp" alt="Ecosystem 3" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
+                    <Image src="/images/matchoAtivo 3.png" alt="Ecosystem 3" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="col-span-1 row-span-1 bg-[#F080A5] rounded-[24px] sm:rounded-[32px] p-4 sm:p-8 flex items-center justify-center group cursor-view relative" data-aos="zoom-in" data-aos-delay="200">
-                    <Image src="/images/projects/matcha-mojo/matchoAtivo 4.webp" alt="Ecosystem 4" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
+                    <Image src="/images/matchoAtivo 4.png" alt="Ecosystem 4" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="col-span-1 row-span-1 bg-white rounded-[24px] sm:rounded-[32px] p-4 sm:p-8 flex items-center justify-center group cursor-view relative" data-aos="zoom-in" data-aos-delay="300">
-                    <Image src="/images/projects/matcha-mojo/matchoAtivo 5.webp" alt="Ecosystem 5" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
+                    <Image src="/images/matchoAtivo 5.png" alt="Ecosystem 5" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="col-span-1 row-span-1 bg-brand-card border border-white/5 rounded-[24px] sm:rounded-[32px] p-4 sm:p-8 flex items-center justify-center group cursor-view relative" data-aos="zoom-in" data-aos-delay="400">
-                    <Image src="/images/projects/matcha-mojo/matchoAtivo 6.webp" alt="Ecosystem 6" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
+                    <Image src="/images/matchoAtivo 6.png" alt="Ecosystem 6" fill className="object-contain p-4 group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="col-span-2 md:col-span-4 row-span-1 bg-[#B4E82E] rounded-[24px] sm:rounded-[32px] overflow-hidden p-6 sm:p-12 flex items-center justify-center group cursor-view relative" data-aos="fade-up" data-aos-delay="500">
-                    <Image src="/images/projects/matcha-mojo/matchoAtivo 7.webp" alt="Ecosystem 7" fill className="object-contain p-6 group-hover:scale-105 transition-transform duration-500" />
+                    <Image src="/images/matchoAtivo 7.png" alt="Ecosystem 7" fill className="object-contain p-6 group-hover:scale-105 transition-transform duration-500" />
                 </div>
             </div>
         </section>
@@ -136,11 +136,11 @@ export default function MatchaMojo() {
                 
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6 space-y-4 sm:space-y-6">
                     {[
-                      '/images/projects/matcha-mojo/mockup matcha mojo 1.webp', 
-                      '/images/projects/matcha-mojo/mockup matcha mojo 2.webp', 
-                      '/images/projects/matcha-mojo/mockup matcha mojo 3.webp', 
-                      '/images/projects/matcha-mojo/mockup matcha mojo 4.webp', 
-                      '/images/projects/matcha-mojo/mockup matcha mojo 5.webp'
+                      '/images/mockup matcha mojo 1.jpg', 
+                      '/images/mockup matcha mojo 2.jpg', 
+                      '/images/mockup matcha mojo 3.jpg', 
+                      '/images/mockup matcha mojo 4.jpg', 
+                      '/images/mockup matcha mojo 5.jpg'
                     ].map((src, i) => (
                         <div key={i} className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden break-inside-avoid relative group border border-white/5 bg-brand-card shadow-xl cursor-view" data-aos="fade-up" data-aos-delay={i * 100}>
                             <Image src={src} alt={`Mockup ${i+1}`} width={800} height={1200} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />

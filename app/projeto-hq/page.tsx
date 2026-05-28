@@ -74,11 +74,11 @@ export default function ProjetoHQ() {
   const [viewMode, setViewMode] = useState<'book' | 'scroll'>('book');
   
   const bookPages = [
-    "/images/Cover.webp",
-    ...Array.from({length:37}).map((_,i) => `/images/projects/projeto-hq/P${i+1}.webp`),
-    "/images/projects/projeto-hq/P38-39.webp",
-    ...Array.from({length:5}).map((_,i) => `/images/projects/projeto-hq/P${i+40}.webp`),
-    "/images/projects/projeto-hq/Back Cover.webp"
+    "/images/Cover.png",
+    ...Array.from({length:37}).map((_,i) => `/images/P${i+1}.png`),
+    "/images/P38-39.png",
+    ...Array.from({length:5}).map((_,i) => `/images/P${i+40}.png`),
+    "/images/Back Cover.png"
   ];
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -99,7 +99,7 @@ export default function ProjetoHQ() {
             </div>
             
             <div className="w-full aspect-[16/9] md:aspect-[21/9] lg:max-h-[65vh] xl:max-h-[75vh] rounded-[16px] sm:rounded-[24px] overflow-hidden relative cursor-view bg-brand-card border border-white/10 project-img-wrapper shadow-2xl">
-                <Image src="/images/projects/projeto-hq/ultrawide imagem além do céu.webp" alt="Capa Ultrawide Além do Céu" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700 hover:scale-105" data-speed="0.05" />
+                <Image src="/images/ultrawide imagem além do céu.jpg" alt="Capa Ultrawide Além do Céu" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700 hover:scale-105" data-speed="0.05" />
             </div>
         </header>
 
@@ -128,7 +128,7 @@ export default function ProjetoHQ() {
                 <p className="text-white/50 font-medium text-sm sm:text-base">{t('videoSubtitle')}</p>
             </div>
             <div className="w-full aspect-video rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card shadow-2xl border border-white/5 cursor-hover">
-                <video className="w-full h-full object-cover" controls playsInline poster="/images/projects/projeto-hq/Além do Céu imagem principal 1.webp">
+                <video className="w-full h-full object-cover" controls playsInline poster="/images/Além do Céu imagem principal 1.jpg">
                     <source src="/videos/Final_video.mp4" type="video/mp4" />
                 </video>
             </div>
@@ -164,11 +164,11 @@ export default function ProjetoHQ() {
 
             {viewMode === 'scroll' && (
               <div className="w-full max-w-4xl mx-auto flex flex-col gap-4 py-6 bg-black border border-white/5 rounded-2xl shadow-2xl p-2 sm:p-6 md:p-10">
-                  <Image src="/images/Cover.webp" alt="Capa" width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />
-                  {Array.from({length:37}).map((_,i) => <Image key={i} src={`/images/projects/projeto-hq/P${i+1}.webp`} alt={`Página ${i+1}`} width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />)}
-                  <Image src="/images/projects/projeto-hq/P38-39.webp" alt="Páginas 38-39" width={2400} height={1800} className="w-full h-auto object-contain shadow-2xl my-4 border border-[#00FFA3]/20 rounded-lg" />
-                  {Array.from({length:5}).map((_,i) => <Image key={i} src={`/images/projects/projeto-hq/P${i+40}.webp`} alt={`Página ${i+40}`} width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />)}
-                  <Image src="/images/projects/projeto-hq/Back Cover.webp" alt="Contracapa" width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />
+                  <Image src="/images/Cover.png" alt="Capa" width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />
+                  {Array.from({length:37}).map((_,i) => <Image key={i} src={`/images/P${i+1}.png`} alt={`Página ${i+1}`} width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />)}
+                  <Image src="/images/P38-39.png" alt="Páginas 38-39" width={2400} height={1800} className="w-full h-auto object-contain shadow-2xl my-4 border border-[#00FFA3]/20 rounded-lg" />
+                  {Array.from({length:5}).map((_,i) => <Image key={i} src={`/images/P${i+40}.png`} alt={`Página ${i+40}`} width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />)}
+                  <Image src="/images/Back Cover.png" alt="Contracapa" width={1200} height={1800} className="w-full h-auto object-contain shadow-lg" />
               </div>
             )}
 
@@ -180,7 +180,7 @@ export default function ProjetoHQ() {
                 <p className="text-white/70 font-medium text-sm sm:text-lg">{t('galleryDesc')}</p>
             </div>
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 sm:gap-8 space-y-6 sm:space-y-8">
-                {['/images/projects/projeto-hq/imagem HQ e Sketch.webp', '/images/projects/projeto-hq/1768425642299.webp', '/images/projects/projeto-hq/1768425642365.webp', '/images/projects/projeto-hq/1768425645964.webp', '/images/projects/projeto-hq/cards.webp', '/images/projects/projeto-hq/1768425644019.webp', '/images/projects/projeto-hq/1768425644264.webp', '/images/projects/projeto-hq/bottons.webp'].map((src, i) => (
+                {['/images/imagem HQ e Sketch.jpg', '/images/1768425642299.jpg', '/images/1768425642365.jpg', '/images/1768425645964.jpg', '/images/cards.jpg', '/images/1768425644019.jpg', '/images/1768425644264.jpg', '/images/bottons.jpg'].map((src, i) => (
                     <div key={i} className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden cursor-view break-inside-avoid relative border border-white/5 bg-brand-card shadow-xl group" data-aos="fade-up">
                         <Image src={src} alt={`Galeria ${i+1}`} width={800} height={1200} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>

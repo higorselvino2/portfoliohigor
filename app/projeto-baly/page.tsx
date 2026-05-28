@@ -66,7 +66,7 @@ export default function ProjetoBaly() {
                 </h1>
             </div>
             <div className="w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] lg:max-h-[65vh] xl:max-h-[75vh] rounded-[16px] sm:rounded-[24px] overflow-hidden relative cursor-view bg-brand-card border border-white/10 project-img-wrapper shadow-2xl">
-                <Image src="/images/projects/projeto-baly/baly imagem principal 1.webp" alt="Baly Capa Principal" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700" data-speed="0.05" />
+                <Image src="/images/baly imagem principal 1.jpg" alt="Baly Capa Principal" fill className="object-cover object-center project-img-parallax opacity-90 hover:opacity-100 transition-all duration-700" data-speed="0.05" />
             </div>
         </header>
 
@@ -94,10 +94,10 @@ export default function ProjetoBaly() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-xl" data-aos="fade-up">
-                    <Image src="/images/projects/projeto-baly/O Baly é meninoPrancheta 2@3x.webp" alt="Logo Variant 1" width={800} height={800} className="w-full h-full object-contain hover:scale-105 transition-transform duration-700 p-4 sm:p-8" />
+                    <Image src="/images/O Baly é meninoPrancheta 2@3x.png" alt="Logo Variant 1" width={800} height={800} className="w-full h-full object-contain hover:scale-105 transition-transform duration-700 p-4 sm:p-8" />
                 </div>
                 <div className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-xl" data-aos="fade-up" data-aos-delay="100">
-                    <Image src="/images/projects/projeto-baly/O Baly é meninoPrancheta 2 cópia@3x.webp" alt="Logo Variant 2" width={800} height={800} className="w-full h-full object-contain hover:scale-105 transition-transform duration-700 p-4 sm:p-8" />
+                    <Image src="/images/O Baly é meninoPrancheta 2 cópia@3x.png" alt="Logo Variant 2" width={800} height={800} className="w-full h-full object-contain hover:scale-105 transition-transform duration-700 p-4 sm:p-8" />
                 </div>
             </div>
         </section>
@@ -110,11 +110,11 @@ export default function ProjetoBaly() {
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 mt-8 sm:mt-12" data-aos="fade-up" data-aos-delay="100">
                     {[
-                      { src: '/images/projects/projeto-baly/LATA TRADICIONAL.webp', label: 'Tradicional' },
-                      { src: '/images/projects/projeto-baly/LATA MAÇÃ VERDE.webp', label: 'Maçã Verde' },
-                      { src: '/images/projects/projeto-baly/LATA MELANCIA.webp', label: 'Melancia', hl: true },
-                      { src: '/images/projects/projeto-baly/LATA AÇAÍ.webp', label: 'Açaí' },
-                      { src: '/images/projects/projeto-baly/LATA GUARANÁ.webp', label: 'Guaraná' },
+                      { src: '/images/LATA TRADICIONAL.png', label: 'Tradicional' },
+                      { src: '/images/LATA MAÇÃ VERDE.png', label: 'Maçã Verde' },
+                      { src: '/images/LATA MELANCIA.png', label: 'Melancia', hl: true },
+                      { src: '/images/LATA AÇAÍ.png', label: 'Açaí' },
+                      { src: '/images/LATA GUARANÁ.png', label: 'Guaraná' },
                     ].map((item, i) => (
                       <div key={i} className={`flex flex-col gap-3 transition-transform duration-300 hover:-translate-y-4 cursor-view group ${item.hl ? 'md:-translate-y-6' : ''}`}>
                           <div className={`w-full aspect-[3/4] md:aspect-[4/5] rounded-[16px] sm:rounded-[24px] overflow-hidden border bg-brand-dark shadow-xl relative ${item.hl ? 'border-[#FFE600]/30 shadow-[0_20px_40px_rgba(255,230,0,0.15)]' : 'border-white/5'}`}>
@@ -134,10 +134,10 @@ export default function ProjetoBaly() {
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 {[
-                  '/images/projects/projeto-baly/melancia planoPrancheta 1 cópia 3.webp', 
-                  '/images/projects/projeto-baly/melancia planoPrancheta 1 cópia 2.webp', 
-                  '/images/projects/projeto-baly/planoPrancheta 1 cópia.webp', 
-                  '/images/projects/projeto-baly/planoPrancheta 1.webp'
+                  '/images/melancia planoPrancheta 1 cópia 3.png', 
+                  '/images/melancia planoPrancheta 1 cópia 2.png', 
+                  '/images/planoPrancheta 1 cópia.png', 
+                  '/images/planoPrancheta 1.png'
                 ].map((src, i) => (
                   <div key={i} className="w-full rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card border border-white/5 cursor-view shadow-lg" data-aos="fade-up" data-aos-delay={i * 100}>
                       <Image src={src} alt={`Padrão visual ${i+1}`} width={800} height={800} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />

@@ -107,10 +107,10 @@ export default function ProjetoCacau() {
                 </div>
                 <div className="w-full lg:w-1/2 flex flex-col sm:flex-row gap-4 sm:gap-6 relative z-10" data-aos="fade-left">
                     <div className="w-full sm:w-1/2 rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 cursor-view shadow-xl aspect-[3/4] sm:aspect-auto relative">
-                        <Image src="/images/projects/projeto-cacau/eu com troféu.webp" alt="Higor Selvino com Troféu Anhembi Awards" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                        <Image src="/images/eu com troféu.jpg" alt="Higor Selvino com Troféu Anhembi Awards" fill className="object-cover hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div className="w-full sm:w-1/2 rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 cursor-view shadow-xl aspect-[3/4] sm:aspect-auto relative">
-                        <Image src="/images/projects/projeto-cacau/troféu.webp" alt="Troféu Anhembi Awards" fill className="object-cover hover:scale-105 transition-transform duration-700" />
+                        <Image src="/images/troféu.jpg" alt="Troféu Anhembi Awards" fill className="object-cover hover:scale-105 transition-transform duration-700" />
                     </div>
                 </div>
             </div>
@@ -132,10 +132,10 @@ export default function ProjetoCacau() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 items-stretch py-8 sm:py-12 border-y border-white/5" data-aos="fade-up">
                     <div className="bg-white/5 rounded-[16px] sm:rounded-[24px] p-6 sm:p-10 flex justify-center items-center border border-white/5 h-full">
-                        <Image src="/images/projects/projeto-cacau/logo CACAU SHOW.webp" alt="Logo Cacau Show" width={400} height={200} className="w-full max-w-[150px] sm:max-w-[220px] h-auto object-contain opacity-80" />
+                        <Image src="/images/logo CACAU SHOW.png" alt="Logo Cacau Show" width={400} height={200} className="w-full max-w-[150px] sm:max-w-[220px] h-auto object-contain opacity-80" />
                     </div>
                     <div className="bg-[#eb5612]/10 rounded-[16px] sm:rounded-[24px] p-6 sm:p-10 flex justify-center items-center border border-[#eb5612]/20 h-full">
-                        <Image src="/images/projects/projeto-cacau/logo principal CACAU PARQUE.webp" alt="Logo Cacau Parque" width={400} height={200} className="w-full max-w-[180px] sm:max-w-[280px] h-auto object-contain drop-shadow-[0_0_20px_rgba(235,86,18,0.4)]" />
+                        <Image src="/images/logo principal CACAU PARQUE.png" alt="Logo Cacau Parque" width={400} height={200} className="w-full max-w-[180px] sm:max-w-[280px] h-auto object-contain drop-shadow-[0_0_20px_rgba(235,86,18,0.4)]" />
                     </div>
                 </div>
             </div>
@@ -147,15 +147,15 @@ export default function ProjetoCacau() {
                     <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-black uppercase tracking-wider text-[#eb5612]">Sistema <span className="text-white">Visual</span></h3>
                     <p className="text-white/70 font-light text-base sm:text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t('designSystemDesc') }}></p>
                     <div className="rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 shadow-2xl cursor-view mt-4">
-                        <Image src="/images/projects/projeto-cacau/paleta de cores c.webp" alt="Paleta de Cores" width={1200} height={800} className="w-full h-auto" />
+                        <Image src="/images/paleta de cores c.png" alt="Paleta de Cores" width={1200} height={800} className="w-full h-auto" />
                     </div>
                 </div>
                 <div className="lg:col-span-7 grid grid-cols-1 gap-6 sm:gap-8" data-aos="fade-left">
                     <div className="rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 shadow-2xl cursor-view">
-                        <Image src="/images/projects/projeto-cacau/hirarquia tipografica (1).webp" alt="Hierarquia" width={1600} height={800} className="w-full h-auto" />
+                        <Image src="/images/hirarquia tipografica (1).png" alt="Hierarquia" width={1600} height={800} className="w-full h-auto" />
                     </div>
                     <div className="rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 shadow-2xl cursor-view">
-                        <Image src="/images/projects/projeto-cacau/hirarquia tipografica (2).webp" alt="Hierarquia" width={1600} height={800} className="w-full h-auto" />
+                        <Image src="/images/hirarquia tipografica (2).png" alt="Hierarquia" width={1600} height={800} className="w-full h-auto" />
                     </div>
                 </div>
             </div>
@@ -168,14 +168,14 @@ export default function ProjetoCacau() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12">
                 {[
-                  { img: '/images/projects/projeto-cacau/brinquedo MONTANHA-RUSSA GIRA CHOCOMONSTROS.webp', label: 'Gira Chocomonstros' },
-                  { img: '/images/projects/projeto-cacau/brinquedo RODA GIGABYTES.webp', label: 'Roda Gigabytes' },
-                  { img: '/images/projects/projeto-cacau/brinquedo BENDITO KAMIKAZE.webp', label: 'Bendito Kamikaze' },
-                  { img: '/images/projects/projeto-cacau/brinquedo CHOCOBICHOS CARROSSEL.webp', label: 'Chocobichos Carrossel' },
-                  { img: '/images/projects/projeto-cacau/brinquedo ESPAÇO MIAU KIDS.webp', label: 'Espaço Miau Kids' },
-                  { img: '/images/projects/projeto-cacau/brinquedo EXPRESSO CHOCOLATE.webp', label: 'Expresso Chocolate' },
-                  { img: '/images/projects/projeto-cacau/brinquedo JARDIM DA BELLA.webp', label: 'Jardim da Bella' },
-                  { img: '/images/projects/projeto-cacau/brinquedo MONTANHA RUSSA MONTEBELLO.webp', label: 'Montanha Russa Montebello' }
+                  { img: '/images/brinquedo MONTANHA-RUSSA GIRA CHOCOMONSTROS.png', label: 'Gira Chocomonstros' },
+                  { img: '/images/brinquedo RODA GIGABYTES.png', label: 'Roda Gigabytes' },
+                  { img: '/images/brinquedo BENDITO KAMIKAZE.png', label: 'Bendito Kamikaze' },
+                  { img: '/images/brinquedo CHOCOBICHOS CARROSSEL.png', label: 'Chocobichos Carrossel' },
+                  { img: '/images/brinquedo ESPAÇO MIAU KIDS.png', label: 'Espaço Miau Kids' },
+                  { img: '/images/brinquedo EXPRESSO CHOCOLATE.png', label: 'Expresso Chocolate' },
+                  { img: '/images/brinquedo JARDIM DA BELLA.png', label: 'Jardim da Bella' },
+                  { img: '/images/brinquedo MONTANHA RUSSA MONTEBELLO.png', label: 'Montanha Russa Montebello' }
                 ].map((item, i) => (
                     <div key={i} className="flex flex-col items-center gap-3 sm:gap-4 group" data-aos="zoom-in" data-aos-delay={(i % 4) * 100}>
                         <div className="w-full aspect-square rounded-full bg-white/5 border border-white/10 flex items-center justify-center p-6 sm:p-10 transition-all group-hover:bg-[#eb5612]/20 cursor-view shadow-xl relative">
@@ -193,20 +193,20 @@ export default function ProjetoCacau() {
                 <p className="text-white/70 font-medium text-sm sm:text-lg mt-2 sm:mt-4">{t('packagingDesc')}</p>
             </div>
             <div className="w-full aspect-[16/9] sm:aspect-video rounded-[16px] sm:rounded-[24px] overflow-hidden bg-brand-card shadow-2xl border border-white/10 mb-12 sm:mb-16" data-aos="fade-up">
-                <video className="w-full h-full object-cover" controls playsInline poster="/images/projects/projeto-cacau/ultrawide imagem cacau parque.webp">
+                <video className="w-full h-full object-cover" controls playsInline poster="/images/ultrawide imagem cacau parque.jpg">
                     <source src="/videos/YTDown.com_YouTube_Media_RrafOBqSf9o_001_1080p.mp4" type="video/mp4" />
                 </video>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 mb-12 sm:mb-16">
                 {[1,2,3,4,5].map((num) => (
                     <div key={num} className="rounded-xl sm:rounded-2xl overflow-hidden cursor-view border border-white/5 bg-brand-card" data-aos="fade-up" data-aos-delay={num * 100}>
-                        <Image src={`/images/projects/projeto-cacau/embalagem ${num}.webp`} alt={`Embalagem ${num}`} width={600} height={800} className="hover:scale-110 transition-all duration-500 w-full h-auto" />
+                        <Image src={`/images/embalagem ${num}.png`} alt={`Embalagem ${num}`} width={600} height={800} className="hover:scale-110 transition-all duration-500 w-full h-auto" />
                     </div>
                 ))}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
-                <div className="rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 shadow-2xl cursor-view bg-brand-card" data-aos="fade-right"><Image src="/images/projects/projeto-cacau/embalagem na gondula mockup.webp" alt="Embalagem Mockup 1" width={1200} height={800} className="w-full h-auto hover:scale-105 transition-transform duration-1000" /></div>
-                <div className="rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 shadow-2xl cursor-view bg-brand-card" data-aos="fade-left"><Image src="/images/projects/projeto-cacau/poster mockup sem fundo.webp" alt="Poster Mockup" width={1200} height={800} className="w-full h-auto hover:scale-105 transition-transform duration-1000" /></div>
+                <div className="rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 shadow-2xl cursor-view bg-brand-card" data-aos="fade-right"><Image src="/images/embalagem na gondula mockup.png" alt="Embalagem Mockup 1" width={1200} height={800} className="w-full h-auto hover:scale-105 transition-transform duration-1000" /></div>
+                <div className="rounded-[16px] sm:rounded-[24px] overflow-hidden border border-white/10 shadow-2xl cursor-view bg-brand-card" data-aos="fade-left"><Image src="/images/poster mockup sem fundo.png" alt="Poster Mockup" width={1200} height={800} className="w-full h-auto hover:scale-105 transition-transform duration-1000" /></div>
             </div>
         </section>
 
@@ -214,14 +214,14 @@ export default function ProjetoCacau() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-[#eb5612]/5 rounded-full blur-[100px] pointer-events-none -z-10"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
                 <div className="relative flex justify-center items-center cursor-view" data-aos="zoom-in">
-                    <Image src="/images/projects/projeto-cacau/bilhete dourado.webp" alt="Bilhete Dourado" width={800} height={400} className="w-full max-w-[350px] sm:max-w-[450px] h-auto rounded-2xl shadow-2xl drop-shadow-[0_0_40px_rgba(235,86,18,0.3)] hover:scale-105 transition-transform duration-500" />
+                    <Image src="/images/bilhete dourado.png" alt="Bilhete Dourado" width={800} height={400} className="w-full max-w-[350px] sm:max-w-[450px] h-auto rounded-2xl shadow-2xl drop-shadow-[0_0_40px_rgba(235,86,18,0.3)] hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="flex flex-col gap-6 sm:gap-8" data-aos="fade-left">
                     <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-black uppercase tracking-wider text-[#eb5612]">{t('ticketTitle')}</h3>
                     <p className="text-white/70 font-light text-base sm:text-lg leading-relaxed">{t('ticketDesc')}</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                        <div className="rounded-2xl overflow-hidden border border-white/10 cursor-view shadow-xl bg-brand-card relative aspect-video"><Image src="/images/projects/projeto-cacau/foto bilhete saindo da embalagem.webp" alt="Bilhete" fill className="object-cover hover:scale-105 transition-transform" /></div>
-                        <div className="rounded-2xl overflow-hidden border border-white/10 cursor-view shadow-xl bg-brand-card relative aspect-video"><Image src="/images/projects/projeto-cacau/varios bilhetes dourados foto.webp" alt="Bilhetes" fill className="object-cover hover:scale-105 transition-transform" /></div>
+                        <div className="rounded-2xl overflow-hidden border border-white/10 cursor-view shadow-xl bg-brand-card relative aspect-video"><Image src="/images/foto bilhete saindo da embalagem.png" alt="Bilhete" fill className="object-cover hover:scale-105 transition-transform" /></div>
+                        <div className="rounded-2xl overflow-hidden border border-white/10 cursor-view shadow-xl bg-brand-card relative aspect-video"><Image src="/images/varios bilhetes dourados foto.png" alt="Bilhetes" fill className="object-cover hover:scale-105 transition-transform" /></div>
                     </div>
                 </div>
             </div>
@@ -230,7 +230,7 @@ export default function ProjetoCacau() {
         <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-24 border-t border-white/5">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
                 <div id="map-container" className="lg:col-span-7 rounded-[16px] sm:rounded-[24px] lg:rounded-[40px] overflow-hidden border border-white/5 shadow-2xl shadow-[0_0_50px_rgba(235,86,18,0.1)] relative cursor-crosshair pb-[100%]" data-aos="fade-right">
-                    <Image id="map-image" src="/images/projects/projeto-cacau/mapa projetado do cacau parque.webp" alt="Map" fill className="object-cover transition-transform duration-300 ease-out hover:scale-[2.5]" />
+                    <Image id="map-image" src="/images/mapa projetado do cacau parque.png" alt="Map" fill className="object-cover transition-transform duration-300 ease-out hover:scale-[2.5]" />
                 </div>
                 <div className="lg:col-span-5" data-aos="fade-left">
                     <h3 className="text-3xl sm:text-4xl font-display font-black uppercase tracking-wider text-[#eb5612] mb-4 sm:mb-6" dangerouslySetInnerHTML={{ __html: t('mapTitle') }}></h3>

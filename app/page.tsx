@@ -67,25 +67,25 @@ export default function Home() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const baseProjects = [
-    { title: 'Além do Céu', desc: 'Livro & HQ', link: '/projeto-hq', img: '/images/Além do Céu imagem principal 1.webp', badge: '🏆 Vencedor Expocom Sudeste' },
-    { title: 'Cacau Parque', desc: 'Embalagem & Identidade Visual', link: '/projeto-cacau', img: '/images/Cacau Parque imagem principal 1.webp', badge: '🏆 Vencedor do Anhembi Awards' },
-    { title: 'Song Bird', desc: 'Música & Estúdio', link: '/songbird', img: '/images/song bird imagem principal 1.webp' },
-    { title: 'Matcha Mojo', desc: 'Branding', link: '/matcha-mojo', img: '/images/matcha mojo imagem principal 1.webp' },
-    { title: 'Baly', desc: 'Redesign de Marca', link: '/projeto-baly', img: '/images/baly imagem principal 1.webp' },
-    { title: 'Doaleite', desc: 'Ação & Branding', link: '/doaleite', img: '/images/doaleite imagem principal 1.webp' },
-    { title: 'The Florist', desc: 'Direção de Arte', link: '/the-florist', img: '/images/the florist imagem principal 1.webp' },
-    { title: 'Ilustrações', desc: 'Arte Digital', link: 'https://instagram.com/higor.selvino', img: '/images/Ilustrações imagem principal 1.webp', blank: true },
+    { title: 'Além do Céu', desc: 'Livro & HQ', link: '/projeto-hq', img: '/images/Além do Céu imagem principal 1.jpg', badge: '🏆 Vencedor Expocom Sudeste' },
+    { title: 'Cacau Parque', desc: 'Embalagem & Identidade Visual', link: '/projeto-cacau', img: '/images/Cacau Parque imagem principal 1.jpg', badge: '🏆 Vencedor do Anhembi Awards' },
+    { title: 'Song Bird', desc: 'Música & Estúdio', link: '/songbird', img: '/images/song bird imagem principal 1.jpg' },
+    { title: 'Matcha Mojo', desc: 'Branding', link: '/matcha-mojo', img: '/images/matcha mojo imagem principal 1.jpg' },
+    { title: 'Baly', desc: 'Redesign de Marca', link: '/projeto-baly', img: '/images/baly imagem principal 1.jpg' },
+    { title: 'Doaleite', desc: 'Ação & Branding', link: '/doaleite', img: '/images/doaleite imagem principal 1.jpg' },
+    { title: 'The Florist', desc: 'Direção de Arte', link: '/the-florist', img: '/images/the florist imagem principal 1.jpg' },
+    { title: 'Ilustrações', desc: 'Arte Digital', link: 'https://instagram.com/higor.selvino', img: '/images/Ilustrações imagem principal 1.jpg', blank: true },
   ];
 
   const shrekProjects = [
-    { title: 'Além do Pântano', desc: 'Ogro & Aventura', link: '/projeto-hq', img: '/images/1211043-shrek-arrive-sur-netflix-le-1er-novembre-2025.webp', badge: '🏆 Vencedor do Pântano' },
-    { title: 'Cacau do Ogro', desc: 'Sabor de Lama', link: '/projeto-cacau', img: '/images/shrek-passeios-kids.webp', badge: '🏆 Cebola de Ouro' },
-    { title: 'Voz da Fiona', desc: 'Canto da Fiona', link: '/songbird', img: '/images/images (1).webp' },
-    { title: 'Matcha do Burro', desc: 'Sabor de Lama', link: '/matcha-mojo', img: '/images/5d43f01-shrek-1024x576.webp' },
-    { title: 'Baly Ogro', desc: 'Baly de Ogro', link: '/projeto-baly', img: '/images/maxresdefault.webp' },
-    { title: 'Doaleite Ogrístico', desc: 'Amigos da Fiona', link: '/doaleite', img: '/images/blob_reva.webp' },
-    { title: 'O Florista Ogro', desc: 'O Florista Ogro', link: '/the-florist', img: '/images/burro-do-shrek_2025-07-30_14-47-35.webp' },
-    { title: 'Rabiscos do Shrek', desc: 'Rabiscos na Lama', link: 'https://instagram.com/higor.selvino', img: '/images/Shrek_Shrek_FE-TUBBZ_PL_1.webp', blank: true },
+    { title: 'Além do Pântano', desc: 'Ogro & Aventura', link: '/projeto-hq', img: '/images/1211043-shrek-arrive-sur-netflix-le-1er-novembre-2025.jpg', badge: '🏆 Vencedor do Pântano' },
+    { title: 'Cacau do Ogro', desc: 'Sabor de Lama', link: '/projeto-cacau', img: '/images/shrek-passeios-kids.jpg', badge: '🏆 Cebola de Ouro' },
+    { title: 'Voz da Fiona', desc: 'Canto da Fiona', link: '/songbird', img: '/images/images (1).jpg' },
+    { title: 'Matcha do Burro', desc: 'Sabor de Lama', link: '/matcha-mojo', img: '/images/5d43f01-shrek-1024x576.jpg' },
+    { title: 'Baly Ogro', desc: 'Baly de Ogro', link: '/projeto-baly', img: '/images/maxresdefault.jpg' },
+    { title: 'Doaleite Ogrístico', desc: 'Amigos da Fiona', link: '/doaleite', img: '/images/blob_reva.jpg' },
+    { title: 'O Florista Ogro', desc: 'O Florista Ogro', link: '/the-florist', img: '/images/burro-do-shrek_2025-07-30_14-47-35.jpg' },
+    { title: 'Rabiscos do Shrek', desc: 'Rabiscos na Lama', link: 'https://instagram.com/higor.selvino', img: '/images/Shrek_Shrek_FE-TUBBZ_PL_1.jpg', blank: true },
   ];
 
   const projects = isShrekMode ? shrekProjects : baseProjects;
@@ -147,7 +147,7 @@ export default function Home() {
                     <div onClick={handleProfileClick} className="relative aspect-[4/5] rounded-[24px] overflow-hidden group cursor-pointer bg-brand-yellow shadow-2xl border border-white/10">
                         <div className="absolute inset-0 bg-brand-yellow opacity-20 mix-blend-color z-10 pointer-events-none group-hover:opacity-0 transition-opacity duration-500"></div>
                         <div className="w-full h-full">
-                            <Image src={isShrekMode ? '/images/Shrek29_29.webp' : '/images/freepik__-model-midjourney-dalle3-stablediffusion-subjectre__89002.webp'} alt="Higor Selvino" fill className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
+                            <Image src={isShrekMode ? '/images/Shrek29_29.jpg' : '/images/freepik__-model-midjourney-dalle3-stablediffusion-subjectre__89002.png'} alt="Higor Selvino" fill className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />
                         </div>
                         <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-brand-dark/80 backdrop-blur-md px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-white/10 flex items-center gap-2 md:gap-3 z-20 shadow-xl">
                             <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-brand-yellow animate-pulse"></div>
